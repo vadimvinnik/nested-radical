@@ -106,7 +106,7 @@ q = \sqrt{1 + \sqrt{2 + \sqrt{3 + \sqrt{4 +\ldots}}}} .
 состоит из всего выражения.
 \begin{align}
     f_0(x) & = x, \label{eq:func_recur_base} \\
-    f_{n+1}(x) & = f_n(\sqrt{n + x}). \label{eq:func_recur_step}
+    f_{n+1}(x) & = f_n(\sqrt{n + 1 + x}). \label{eq:func_recur_step}
 \end{align}
 
 Вполне очевидно, что последовательность~\(q_n\) монотонно возрастает. Поэтому для доказательства существования предела~(\ref{eq:lim}) достаточно доказать
@@ -123,10 +123,10 @@ q = \sqrt{1 + \sqrt{2 + \sqrt{3 + \sqrt{4 +\ldots}}}} .
 значение \(r_{n+1}\). В силу рекуррентного соотношения~(\ref{eq:func_recur_step}),
 \begin{align}
 f_{n+1}(x) & \leqslant 2 , \notag \\
-f_n(\sqrt{n + x}) & \leqslant 2 , \notag \\
-\sqrt{n + x} & \leqslant r_n , \notag \\
-n + x & \leqslant r^2_n , \notag \\
-r_{n+1} & = r^2_n - n . \label{eq:bound_recur}
+f_n(\sqrt{n + 1 + x}) & \leqslant 2 , \notag \\
+\sqrt{n + 1 + x} & \leqslant r_n , \notag \\
+n + 1 + x & \leqslant r^2_n , \notag \\
+r_{n+1} & = r^2_n - (n + 1) . \label{eq:bound_recur}
 \end{align}
 
 Таким образом, интервал значений~\(x\), на котором функция~\(f_n\) ограничена сверху значением~2, растёт с ростом~\(n\) и, следовательно, всегда включает
